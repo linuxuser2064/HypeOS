@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2E0CC216-28D2-49FE-A706-56CA8BFBE02F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>HypeOS_Desktop_1._0.My.MyApplication</StartupObject>
+    <RootNamespace>HypeOS_Desktop_1._0</RootNamespace>
+    <AssemblyName>HypeOS Desktop 1.0</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>HypeOS Desktop 1.0.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>HypeOS Desktop 1.0.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BasicAudio, Version=2022.11.30.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BasicAudio.2022.11.30.1\lib\net472\BasicAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="CSVideoPlayer">
+      <HintPath>bin\Debug\CSVideoPlayer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.Compatibility" />
+    <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.1938.49, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.1938.49\lib\net45\Microsoft.Web.WebView2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.WinForms, Version=1.0.1938.49, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.1938.49\lib\net45\Microsoft.Web.WebView2.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Wpf, Version=1.0.1938.49, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.1938.49\lib\net45\Microsoft.Web.WebView2.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HypeOSCore\CmdShell.vb" />
+    <Compile Include="HypeOSCore\CmdWnd.Designer.vb">
+      <DependentUpon>CmdWnd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HypeOSCore\CmdWnd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HypeOSCore\CoreApi.vb" />
+    <Compile Include="HypeOSCore\IniLib.vb" />
+    <Compile Include="HypeOSShell\Deskbar.Designer.vb">
+      <DependentUpon>Deskbar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HypeOSShell\Deskbar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HypeOSShell\Desktop.Designer.vb">
+      <DependentUpon>Desktop.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HypeOSShell\Desktop.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HypeOSCore\HypeOSUserInfo.vb" />
+    <Compile Include="HypeOSCore\LoginDialog.Designer.vb">
+      <DependentUpon>LoginDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HypeOSCore\LoginDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HypeOSShell\eXplorer.Designer.vb">
+      <DependentUpon>eXplorer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HypeOSShell\eXplorer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HypeOSShell\OSSettings.Designer.vb">
+      <DependentUpon>OSSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HypeOSShell\OSSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HypeOSShell\RunDialog.Designer.vb">
+      <DependentUpon>RunDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HypeOSShell\RunDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="TouchOS\MediaHype.Designer.vb">
+      <DependentUpon>MediaHype.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TouchOS\MediaHype.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TouchOS\TouchOSContainer.Designer.vb">
+      <DependentUpon>TouchOSContainer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TouchOS\TouchOSContainer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TouchOS\TouchOsCore\ScreenBorder.Designer.vb">
+      <DependentUpon>ScreenBorder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TouchOS\TouchOsCore\ScreenBorder.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TouchOS\TouchOsCore\TouchOsLogon.Designer.vb">
+      <DependentUpon>TouchOsLogon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TouchOS\TouchOsCore\TouchOsLogon.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TouchOS\TouchOsCore\TouchOsOpenFileDialog.Designer.vb">
+      <DependentUpon>TouchOsOpenFileDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TouchOS\TouchOsCore\TouchOsOpenFileDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TouchOS\TouchOsShell\TouchOsMainScreen.Designer.vb">
+      <DependentUpon>TouchOsMainScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TouchOS\TouchOsShell\TouchOsMainScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TouchOS\TouchOsWebBrowserTab.Designer.vb">
+      <DependentUpon>TouchOsWebBrowserTab.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TouchOS\TouchOsWebBrowserTab.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TouchOS\TouchSurfer.Designer.vb">
+      <DependentUpon>TouchSurfer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TouchOS\TouchSurfer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindSurfer\BrowserTabPage.Designer.vb">
+      <DependentUpon>BrowserTabPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WindSurfer\BrowserTabPage.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WindSurfer\WindSurfer.Designer.vb">
+      <DependentUpon>WindSurfer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WindSurfer\WindSurfer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HypeOSCore\CmdWnd.resx">
+      <DependentUpon>CmdWnd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HypeOSShell\Deskbar.resx">
+      <DependentUpon>Deskbar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HypeOSShell\Desktop.resx">
+      <DependentUpon>Desktop.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HypeOSCore\LoginDialog.resx">
+      <DependentUpon>LoginDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HypeOSShell\eXplorer.resx">
+      <DependentUpon>eXplorer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HypeOSShell\OSSettings.resx">
+      <DependentUpon>OSSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HypeOSShell\RunDialog.resx">
+      <DependentUpon>RunDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TouchOS\MediaHype.resx">
+      <DependentUpon>MediaHype.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TouchOS\TouchOSContainer.resx">
+      <DependentUpon>TouchOSContainer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TouchOS\TouchOsCore\ScreenBorder.resx">
+      <DependentUpon>ScreenBorder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TouchOS\TouchOsCore\TouchOsLogon.resx">
+      <DependentUpon>TouchOsLogon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TouchOS\TouchOsCore\TouchOsOpenFileDialog.resx">
+      <DependentUpon>TouchOsOpenFileDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TouchOS\TouchOsShell\TouchOsMainScreen.resx">
+      <DependentUpon>TouchOsMainScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TouchOS\TouchOsWebBrowserTab.resx">
+      <DependentUpon>TouchOsWebBrowserTab.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TouchOS\TouchSurfer.resx">
+      <DependentUpon>TouchSurfer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindSurfer\BrowserTabPage.resx">
+      <DependentUpon>BrowserTabPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindSurfer\WindSurfer.resx">
+      <DependentUpon>WindSurfer.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ellipsis-1s-200px.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\hypeos_logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hypeos_logo_128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hypeos_logo_160.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hypeos_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pie-chart-blue-loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ellipsis-2.1s-200px.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vbstock.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ellipsis-1s-new.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hypeos_placeholder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutdown_lq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NetSurfer.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="..\packages\Microsoft.Web.WebView2.1.0.1938.49\build\Microsoft.Web.WebView2.targets" Condition="Exists('..\packages\Microsoft.Web.WebView2.1.0.1938.49\build\Microsoft.Web.WebView2.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Web.WebView2.1.0.1938.49\build\Microsoft.Web.WebView2.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Web.WebView2.1.0.1938.49\build\Microsoft.Web.WebView2.targets'))" />
+  </Target>
+</Project>
